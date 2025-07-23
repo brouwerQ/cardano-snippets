@@ -21,7 +21,7 @@ Place this script in the same directory as Martin's scripts, or ensure his scrip
   A local JSON file containing treasury withdrawal proposals.
 
   > ✅ A sample file with the current 39 proposals is included with this script. This was fetched with the following command:
-  > ````
+  > ````bash
   > echo "[" > proposals.json; first=1; for ((page=0;;page++)); do echo "Fetching page $page..." >&2; resp=$(curl -s "https://be.gov.tools/proposal/list?page=$page&pageSize=10&type[]=TreasuryWithdrawals"); items=$(echo "$resp" | jq -c '.elements[]'); [ -z "$items" ] && break; while IFS= read -r item; do [ $first -eq 0 ] && echo "," >> proposals.json; echo "$item" >> proposals.json; first=0; done <<< "$items"; done; echo "]" >> proposals.json
   > ````
 
