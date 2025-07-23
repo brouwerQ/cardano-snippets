@@ -4,7 +4,13 @@ This is a wrapper script around [Martin's voting script](https://github.com/gitm
 
 Place this script in the same directory as Martin's scripts, or ensure his scripts are accessible via your system's `$PATH`.
 
----
+> ## ℹ️ Note
+> **After uploading this, I realized you can simply run `24a_genVote.sh <drep> all "url: <url>"`. So this script isn't really needed anymore, just call the script directly with `all`. However, since the repository is already here, I'm leaving it as is. 😉**
+> 
+> **Also, the performance patch to cache SPO DRep delegation isn't necessary anymore. It's only fetched once when using `all`. You *can* still apply the patch if you want the script to run faster across multiple executions.**
+>
+
+<br>
 
 ## 🚀 Usage
 
@@ -39,9 +45,7 @@ Place this script in the same directory as Martin's scripts, or ensure his scrip
 > 🔸 After each vote, the script pauses and waits for you to press `ENTER`. This helps you follow the process without missing output.
 > You can comment out this line in the script if you prefer automatic, uninterrupted voting.
 
----
-
-## ⚡ Performance Tip – SPO Stake Distribution Caching
+## ⚡ Performance Tip – SPO DRep Delegation Caching
 
 Fetching the **SPO DRep delegation** via Martin’s `24a_genVote.sh` can be slow on every run. To improve performance, you can cache the result for the current epoch.
 
@@ -83,8 +87,6 @@ fi
 This will cache the distribution JSON for the **current epoch**.
 
 > 📝 You can delete the file manually to refresh it, or modify the script to expire the cache sooner if desired.
-
----
 
 ## ⚠️ Disclaimer
 
