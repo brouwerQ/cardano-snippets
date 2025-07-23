@@ -7,7 +7,7 @@ Place this script in the same directory as Martin's scripts, or ensure his scrip
 > ## ℹ️ Note
 > **After uploading this, I realized you can simply run `24a_genVote.sh <drep> all "url: <url>"`. So this script isn't really needed anymore, just call the script directly with `all`. However, since the repository is already here, I'm leaving it as is. 😉**
 > 
-> **Also, the performance patch to cache SPO DRep delegation isn't necessary anymore. It's only fetched once when using `all`. You *can* still apply the patch if you want the script to run faster across multiple executions.**
+> **Also, the performance patch to cache SPO DRep delegation isn't necessary anymore. It's only fetched once when using `all`. You *can* still apply the patch if you want the script to run faster across multiple executions though.**
 >
 
 <br>
